@@ -1,5 +1,7 @@
 {
   "name": "productScanner",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

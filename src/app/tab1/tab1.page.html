@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Scan
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Scan</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list>
+    <ion-list-header lines="inset" class="ion-no-padding">
+      <ion-label class="ion-text-center" color="success">
+        <h1>Scan the Barcode</h1>
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <img [src]='"https://media2.giphy.com/media/l2SpQ0pTWgKGQ7Z7i/giphy.gif"' alt="Description" />
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        {{barcodeNumber}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="scanBarcode()" class="ion-margin-top" size="large" expand="block" fill="outline">Scan
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -53,8 +53,19 @@
         </ion-col>
       </ion-row>
     </ion-card-content>
-    <ion-button (click)="scanBarcode()" class="ion-margin-top"  expand="block" fill="outline">Save this
+    <!-- <ion-button (click)="scanBarcode()" class="ion-margin-top"  expand="block" fill="outline">Save this
       Product
+    </ion-button>-->
+    <ion-button  expand="block" fill="outline">
+      <ion-item>
+        <ion-label>Save this product</ion-label>
+        <ion-datetime   min="1990-02" max="2030-12"
+        displayFormat="MM YY" ></ion-datetime>
+      </ion-item>
     </ion-button>
-  </ion-card>
+    
+
+    
+  </ion-card> 
+  
 </ion-content>

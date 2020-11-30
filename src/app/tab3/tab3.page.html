@@ -1,17 +1,100 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Saved Items
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card class="margin-botto">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <img [src]='"https://media2.giphy.com/media/l2SpQ0pTWgKGQ7Z7i/giphy.gif"' alt="Description" />
+          </ion-col>
+          <ion-col>
+            Shamshi
+            <ion-row>
+              <ion-col>
+                <div>
+                  added
+                </div>
+                <div>
+                  shamshi
+                </div>
+              </ion-col>
+              <ion-col>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+                <div>
+                  expires
+                </div>
+                <div>
+                  shamshi
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <ion-button (click)="scanBarcode()" class="ion-margin-top" size="small" expand="block" fill="outline">Delete
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="scanBarcode()" class="ion-margin-top" size="small" expand="block" fill="outline">Used
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <img [src]='"https://media2.giphy.com/media/l2SpQ0pTWgKGQ7Z7i/giphy.gif"' alt="Description" />
+          </ion-col>
+          <ion-col>
+            Shamshi
+            <ion-row>
+              <ion-col>
+                <div>
+                  added
+                </div>
+                <div>
+                  shamshi
+                </div>
+              </ion-col>
+              <ion-col>
+
+                <div>
+                  expires
+                </div>
+                <div>
+                  shamshi
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <ion-button (click)="scanBarcode()" class="ion-margin-top" size="small" expand="block" fill="outline">Delete
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button (click)="scanBarcode()" class="ion-margin-top" size="small" expand="block" fill="outline">Used
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>

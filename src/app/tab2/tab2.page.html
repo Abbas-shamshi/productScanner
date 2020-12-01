@@ -9,14 +9,18 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-title class="ion-text-center" color="success">
-      <h3>Lays*product name</h3>
+      <h3>{{productDetails[0]['product_name']}}</h3>
     </ion-card-title>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let image of p_images">
+        <ion-item>
+          <img src="{{image}}" alt="Description" />
+        </ion-item>
+      </ion-slide>
+    </ion-slides>
 
-    <ion-item>
-      <img [src]='"https://media2.giphy.com/media/l2SpQ0pTWgKGQ7Z7i/giphy.gif"' alt="Description" />
-    </ion-item>
     <ion-card-header>
-      <ion-card-subtitle>barcode Number ***********</ion-card-subtitle>
+      <ion-card-subtitle>Barcode: {{productDetails[0]['barcode_number']}}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
@@ -25,7 +29,7 @@
           Brand
         </ion-col>
         <ion-col>
-          name
+          {{productDetails[0]['brand']}}
         </ion-col>
       </ion-row>
       <ion-row>
@@ -33,7 +37,7 @@
           Category
         </ion-col>
         <ion-col>
-          shamshi
+          {{productDetails[0]['category']}}
         </ion-col>
       </ion-row>
       <ion-row>
@@ -41,7 +45,7 @@
           Color
         </ion-col>
         <ion-col>
-          shamshi
+          {{productDetails[0]['color']}}
         </ion-col>
       </ion-row>
       <ion-row>
@@ -49,23 +53,22 @@
           Description
         </ion-col>
         <ion-col>
-          shamshi
+          {{productDetails[0]['description']}}
         </ion-col>
       </ion-row>
     </ion-card-content>
     <!-- <ion-button (click)="scanBarcode()" class="ion-margin-top"  expand="block" fill="outline">Save this
       Product
     </ion-button>-->
-    <ion-button  expand="block" fill="outline">
+    <ion-button expand="block" fill="outline">
       <ion-item>
         <ion-label>Save this product</ion-label>
-        <ion-datetime   min="1990-02" max="2030-12"
-        displayFormat="MM YY" ></ion-datetime>
+        <ion-datetime displayFormat="MMMM YY" min="1990-02" max="2030-12"></ion-datetime>
       </ion-item>
     </ion-button>
-    
 
-    
-  </ion-card> 
-  
+
+
+  </ion-card>
+
 </ion-content>

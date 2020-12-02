@@ -18,8 +18,18 @@ export class Tab3Page {
     // Or to get a key/value pair
     this.storage.get('name').then((val) => {
       // console.log('Your name is', val[1]['name']);
-      this.products=val;
-      console.log(this.products)
+      for(var i=0; i<val.length;i++){
+        console.log(i);
+        console.log(val[i]['used']=='false')
+        if(val[i]['deleted']=='false'){    //check if the item is deleted 
+          if(val[i]['used']=='false'){      //check if the item is used 
+            this.products=val;
+
+          }
+
+        }
+      }
+      console.log(val);
     });
   }
 }

@@ -39,15 +39,15 @@ export class Tab2Page {
     this.storage.set('name', [{
       name: 'Lays',
       added: '2018',
-      expirres: '2020',
+      expires: '2020',
       image: 'https://images.barcodelookup.com/5219/52194594-1.jpg',
       deleted: 'false',
-      used: 'false'
+      used: 'true'
     },
     {
       name: 'Pringles',
       added: '2019',
-      expirres: '2021',
+      expires: '2021',
       image: 'https://images.barcodelookup.com/5219/52194594-2.jpg',
       deleted: 'false',
       used: 'false'
@@ -59,10 +59,10 @@ export class Tab2Page {
       var tempArr = [{
         name: 'Oreo',
         added: '2010',
-        expirres: '2020',
+        expires: '2020',
         image: 'https://images.barcodelookup.com/5219/52194594-1.jpg',
         deleted: 'false',
-        used: 'false'
+        used: 'true'
       }]
       this.temp = [...val, ...tempArr];
       console.log(this.temp)
@@ -73,16 +73,19 @@ export class Tab2Page {
   }
 
 
-  doSomething(a) {
-    console.log(a);
-    var dateFormat = a.split('T')[0];
+  doSomething(date) {
+    console.log(date);
+    var dateFormat = date.split('T')[0];
     console.log(dateFormat);
+    var sDate= dateFormat.split("-");
+    var stringDate=sDate.toString();
+    console.log(stringDate);
+
 
     /////Subtract Date
     const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
     const firstDate =new Date().getTime();
-    const secondDate = new Date(2021,12,1).getTime();
-
+    const secondDate = new Date(stringDate).getTime();
     const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
     console.log(diffDays);
   }

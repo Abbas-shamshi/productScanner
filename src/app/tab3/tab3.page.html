@@ -1,12 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Saved Items
+      Product Scanner
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding-bottom">
   <ion-card class="margin-botto" *ngFor="let product of products">
     <ion-grid>
       <ion-row class="ion-align-items-center ion-justify-content-evenly">
@@ -30,7 +30,7 @@
                 expires
               </div>
               <div>
-                {{product['expirres']}}
+                {{product['expires']}}
               </div>
             </ion-col>
           </ion-row>
